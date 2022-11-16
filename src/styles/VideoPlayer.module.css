@@ -1,0 +1,20 @@
+.videoContainer {
+  max-width: 640px;
+  max-height: 360px;
+}
+
+.videoContainer MuxPlayer {
+  aspect-ratio: 16 / 9;
+  height: 100%;
+  width: 100%;
+  --seek-live-button: none;
+  --seek-backward-button: none;
+  --seek-forward-button: none;
+  --mute-button: none;
+  --captions-button: none;
+  --airplay-button: none;
+  --pip-button: none;
+  --cast-button: none;
+  --playback-rate-button: none;
+  --volume-range: none;
+}
