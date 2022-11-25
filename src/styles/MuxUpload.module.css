@@ -1,0 +1,12 @@
+.container {
+  text-align: center;
+}
+
+.label {
+  display: block;
+  font: 1rem 'Fira Sans', sans-serif;
+}
+
+.input {
+  margin: 0.4rem 0;
+}
