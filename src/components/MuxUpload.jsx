@@ -9,10 +9,12 @@ function MuxUpload() {
   async function handleUpload(inputRef) {
     for (const video of inputRef.files) {
       try {
-        const response = await axios.post('http://localhost:3001/upload');
+        const lotNum = video.name.split(' ')[0];
+        const lotJson = JSON.stringify({ lot: `${lotNum}` });
+        console.log(video.name);
+        const response = await axios.post('http://localhost:3001/upload', { lot: lotNum });
 
         console.log('👉 Authenticated upload url:', response.data.url);
-        console.log(inputRef.files);
         const upload = UpChunk.createUpload({
           endpoint: response.data.url,
           file: video, // the file object with all your video file’s data

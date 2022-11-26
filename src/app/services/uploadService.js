@@ -33,16 +33,15 @@ const options = {
   mode: 'cors',
 };
 
-const passthrough = fetch();
-
 app.post('/upload', async (req, res) => {
   try {
+    const lotNumber = await req.body.lot;
     const response = await axios.post(
       `${baseUrl}/video/v1/uploads`,
       {
         cors_origin: '*',
         new_asset_settings: {
-          passthrough: { passthrough },
+          passthrough: lotNumber,
           playback_policy: ['public'],
         },
       },
