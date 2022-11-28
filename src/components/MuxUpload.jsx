@@ -11,7 +11,7 @@ function MuxUpload() {
 
   async function handleUpload(e) {
     e.preventDefault();
-    console.log(videoFiles);
+    // console.log(videoFiles);
 
     for (const video of videoFiles) {
       try {
