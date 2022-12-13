@@ -51,8 +51,6 @@ app.post('/upload', async (req, res) => {
   }
 });
 
-// 🤓 Add your endpoints below here
-
 app.listen(port, () => {
   console.log(`👂🏻 Example app listening on port ${port}`);
 });

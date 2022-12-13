@@ -1,7 +1,5 @@
 import excuteQuery from '../../app/services/db';
 
-// const saleDataFile = require('../../app/data/videos.json');
-
 export const sendToDB = async (lotNumber, playbackId) => {
   try {
     const result = await excuteQuery(`INSERT INTO \`mux_playback\` (\`lot\`, \`playbackId\`) VALUES ('${lotNumber}', '${playbackId}')`);
@@ -9,12 +7,6 @@ export const sendToDB = async (lotNumber, playbackId) => {
   } catch (error) {
     console.log(error);
   }
-
-  // const saleData = saleDataFile.videos;
-  // const newData = { lot: lotNumber, playbackId: playbackId };
-  // const jsonData = JSON.stringify(newData, null, 5);
-  // saleData.push(newData);
-  // console.log(saleDataFile);
 };
 
 export default async function handler(req, res) {
