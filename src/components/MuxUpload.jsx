@@ -45,7 +45,6 @@ function MuxUpload() {
   }
 
   const handleVideos = async (file) => {
-    console.log(file.length);
     for (let i = 0; i < file.length; i++) {
       setVideoFiles([...videoFiles, file[i]]);
     }
