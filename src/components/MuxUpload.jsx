@@ -11,7 +11,6 @@ function MuxUpload() {
 
   async function handleUpload(e) {
     e.preventDefault();
-    // console.log(videoFiles);
 
     for (const video of videoFiles) {
       try {
@@ -51,20 +50,14 @@ function MuxUpload() {
       setVideoFiles([...videoFiles, file[i]]);
     }
   };
-
-  // const videos = inputRef.files;
-  // for (const video of videos) {
-  //   setVideoFiles([...videoFiles, video]);
-  // }
-  // console.log(inputRef);
-  // }
-
   return (
     <div className={styles.container}>
-      <h1>File upload button</h1>
+      <h1>Mux File Upload</h1>
+      <h4>
+        <em>Can handle multiple video uploads, but only one video selection at this time</em>
+      </h4>
 
       <form onSubmit={handleUpload}>
-        {/* <label htmlFor='file-drop'>Select a video file:</label> */}
         <FileUploader className={styles.input} id='file-drop' multiple={true} handleChange={handleVideos} />
         <button>Upload Videos</button>
       </form>

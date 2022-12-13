@@ -1,9 +1,12 @@
-import VideoPlayer from '../components/VideoPlayer';
+import React, { Component } from 'react';
+import MuxUpload from '../components/MuxUpload';
 
-export default function Home() {
-  return (
-    <div>
-      <VideoPlayer />
-    </div>
-  );
+export default class upload extends Component {
+  render() {
+    return (
+      <div>
+        <MuxUpload />
+      </div>
+    );
+  }
 }

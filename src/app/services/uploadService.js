@@ -2,7 +2,6 @@ const axios = require('axios');
 const express = require('express');
 const app = express();
 
-// Express configuration
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
@@ -13,7 +12,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-// Allow you to store API keys in a .env file and load them in as needed
 const dotenv = require('dotenv');
 dotenv.config();
 
